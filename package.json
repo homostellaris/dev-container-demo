@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node src/index.mjs",
-    "test": "mocha src/prettify.test.mjs",
+    "test": "mocha **/*.test.mjs",
     "docker:build": "docker build --tag shiny-new-jpaas .",
-    "docker:test": "docker run -v \"$(pwd)\":/app shiny-new-jpaas npm run test"
+    "docker:test": "docker run -v \"$(pwd)\"/src:/app/src shiny-new-jpaas npm run test"
   },
   "repository": {
     "type": "git",

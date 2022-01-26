@@ -1,0 +1,9 @@
+FROM shiny-new-jpaas
+RUN apk update
+RUN apk add "ruby>2.3.0"
+RUN apk add ruby-dev
+RUN apk add make
+RUN apk add --no-cache build-base git && \
+    gem install travis && \
+    gem install travis-lint && \
+    apk del build-base

@@ -1,0 +1,1 @@
+curl http://localhost:3000 -d '{"url":"https://www.getadministrate.com/careers/", "company":"Administrate", "location": "Edinburgh"}'

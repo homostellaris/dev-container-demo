@@ -1,0 +1,33 @@
+{
+  "name": "dev-container-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.mjs",
+    "test": "mocha src/prettify.test.mjs",
+    "docker:build": "docker build --tag shiny-new-jpaas .",
+    "docker:test": "docker run -v \"$(pwd)\":/app shiny-new-jpaas npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moderatemisbehaviour/dev-container-demo.git"
+  },
+  "keywords": [
+    "devcontainer",
+    "container",
+    "demo",
+    "vscode",
+    "Administrate",
+    "blog"
+  ],
+  "author": "Daniel Tariq Metcalfe",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/moderatemisbehaviour/dev-container-demo/issues"
+  },
+  "homepage": "https://github.com/moderatemisbehaviour/dev-container-demo#readme",
+  "devDependencies": {
+    "mocha": "^9.2.0"
+  }
+}
